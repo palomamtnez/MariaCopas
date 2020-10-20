@@ -55,19 +55,19 @@ section.one {
 }
 
 section.two {
-    background: rgb(252, 186, 197);
+    background: rgb(252, 201, 210);
     -webkit-transition-delay: 0.05s;
 }
 
 section.three {
-    background: rgb(255, 213, 221);
+    background: white;
     -webkit-transition-delay: 0.1s;
 }
 
-section.four {
-    background: white;
-    -webkit-transition-delay: 0.15s;
-}
+/*section.four {*/
+/*    background: white;*/
+/*    -webkit-transition-delay: 0.15s;*/
+/*}*/
 
 section.after {
     -webkit-transform: translateY(100%);
@@ -102,9 +102,9 @@ h1 {
     -webkit-transition-delay: 0.1s;
 }
 
-.page-one section.four {
-    -webkit-transition-delay: 0.05s;
-}
+/*.page-one section.four {*/
+/*    -webkit-transition-delay: 0.05s;*/
+/*}*/
 
 .page-two section.one {
     -webkit-transition-delay: 0s;
@@ -118,9 +118,9 @@ h1 {
     -webkit-transition-delay: 0.1s;
 }
 
-.page-two section.four {
-    -webkit-transition-delay: 0.05s;
-}
+/*.page-two section.four {*/
+/*    -webkit-transition-delay: 0.05s;*/
+/*}*/
 
 .menu-open section {
     cursor: pointer;
@@ -141,8 +141,17 @@ h1 {
 }
 
 .menu-open section.two:active {
-    background: rgb(252, 186, 197);
+    background: rgb(252, 201, 210);
 }
+
+/*.menu-open section.three {*/
+/*    -webkit-transform: translateY(360px);*/
+/*    -webkit-transition-delay: 0.05s;*/
+/*}*/
+
+/*.menu-open section.three:active {*/
+/*    background: rgb(255, 213, 221);*/
+/*}*/
 
 .menu-open section.three {
     -webkit-transform: translateY(360px);
@@ -150,15 +159,6 @@ h1 {
 }
 
 .menu-open section.three:active {
-    background: rgb(255, 213, 221);
-}
-
-.menu-open section.four {
-    -webkit-transform: translateY(480px);
-    -webkit-transition-delay: 0s;
-}
-
-.menu-open section.four:active {
     background: white;
 }
 

@@ -9,6 +9,15 @@
     <meta name="author" content="Paloma">
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/gallery.css">
+<!--    &lt;!&ndash; Core CSS file &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="public/css/photoswipe.css">-->
+
+<!--    &lt;!&ndash; Skin CSS file (styling of UI - buttons, caption, etc.)-->
+<!--         In the folder of skin CSS file there are also:-->
+<!--         - .png and .svg icons sprite,-->
+<!--         - preloader.gif (for browsers that do not support CSS animations) &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="public/css/default-skin/default-skin.css">-->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176774430-1"></script>
     <script>
@@ -24,188 +33,364 @@
 </head>
 
 <body>
-<div class="desktopShow">
-    <h1>Pagina en construccion</h1>
-	<div class="logo">
-		<img src="public/assets/logo.png">
-	</div>
-</div>
-<div class="mobileShow">
-    <div class="wrapper">
-        <h1>Menu</h1>
-        <a class="menu-btn" onclick="toggleMenu()"></a>
-        <section class="one" onclick="goToPage(0)">
-            <h1>Historias</h1>
-        </section>
-        <section class="two" onclick="goToPage(1)">
-            <h1>Modelos</h1>
-            <p></p>
-        </section>
-        <section class="three" onclick="goToPage(2)">
-            <h1>Instructivo</h1>
-            <!-- Container for the image gallery -->
-            <div class="instructivo">
-                <div class="container">
+<div id="app">
+    <div class="desktopShow">
+        <h1>Pagina en construccion</h1>
+        <div class="logo">
+            <img src="public/assets/logo.png">
+        </div>
+    </div>
+    <div class="mobileShow">
+        <div class="wrapper">
+            <h1>Menu</h1>
+            <a class="menu-btn" onclick="toggleMenu()"></a>
+            <section class="one" onclick="goToPage(0)">
+                <h1>Productos</h1>
+            </section>
+            <section class="two" onclick="goToPage(1)">
+                <h1>Instructivo</h1>
+                <!-- Container for the image gallery -->
+                <div class="instructivo">
+                    <div class="container">
 
-                    <!-- Full-width images with number text -->
-                    <div class="mySlides">
-                        <div class="numbertext">1 / 6</div>
-                        <img src="public/instructivo/instructivo.TRANSPARENTE-01.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">2 / 6</div>
-                        <img src="public/instructivo/instructivo.TRANSPARENTE-02.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">3 / 6</div>
-                        <img src="public/instructivo/instructivo.TRANSPARENTE-03.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">4 / 6</div>
-                        <img src="public/instructivo/instructivo.TRANSPARENTE-04.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">5 / 6</div>
-                        <img src="public/instructivo/instructivo.TRANSPARENTE-05.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">6 / 6</div>
-                        <img src="public/instructivo/instructivo.TRANSPARENTE-06.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-                        <div class="numbertext">7 / 7</div>
-                        <img src="public/instructivo/instructivo.TRANSPARENTE-07.png" style="width:100%">
-                    </div>
-
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                    <!-- Image text -->
-                    <div class="caption-container">
-                        <p id="caption"></p>
-                    </div>
-
-                    <!-- Thumbnail images -->
-                    <div class="row">
-                        <div class="column">
-                            <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-01.png"
-                                 style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                        <!-- Full-width images with number text -->
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-01.png" style="width:100%">
                         </div>
-                        <div class="column">
-                            <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-02.png"
-                                 style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-02.png" style="width:100%">
                         </div>
-                        <div class="column">
-                            <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-03.png"
-                                 style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-03.png" style="width:100%">
                         </div>
-                        <div class="column">
-                            <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-04.png"
-                                 style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-04.png" style="width:100%">
                         </div>
-                        <div class="column">
-                            <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-05.png"
-                                 style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-05.png" style="width:100%">
                         </div>
-                        <div class="column">
-                            <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-06.png"
-                                 style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-06.png" style="width:100%">
                         </div>
-                        <div class="column">
-                            <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-07.png"
-                                 style="width:100%" onclick="currentSlide(7)" alt="Snowy Mountains">
+
+                        <div class="mySlides">
+                            <div class="numbertext">7 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-07.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">8 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-08.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">9 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-09.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">10 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-10.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">11 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-11.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">12 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-12.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">13 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-13.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">14 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-14.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">15 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-15.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">16 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-16.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">17 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-17.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">18 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-18.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">19 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-19.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">20 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-20.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">21 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-21.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">22 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-22.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">23 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-23.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">24 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-24.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">25 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-25.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">26 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-26.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">27 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-27.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">28 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-28.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">29 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-29.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">30 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-30.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">31 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-31.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">32 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-32.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">33 / 33</div>
+                            <img src="public/instructivo/instructivo.TRANSPARENTE-33.png" style="width:100%">
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <!-- Image text -->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <!-- Thumbnail images -->
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-01.png"
+                                     style="width:100%" onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-02.png"
+                                     style="width:100%" onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-03.png"
+                                     style="width:100%" onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-04.png"
+                                     style="width:100%" onclick="currentSlide(4)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-05.png"
+                                     style="width:100%" onclick="currentSlide(5)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-06.png"
+                                     style="width:100%" onclick="currentSlide(6)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-07.png"
+                                     style="width:100%" onclick="currentSlide(7)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-08.png"
+                                     style="width:100%" onclick="currentSlide(8)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-09.png"
+                                     style="width:100%" onclick="currentSlide(9)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-10.png"
+                                     style="width:100%" onclick="currentSlide(10)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-11.png"
+                                     style="width:100%" onclick="currentSlide(11)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-12.png"
+                                     style="width:100%" onclick="currentSlide(12)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-13.png"
+                                     style="width:100%" onclick="currentSlide(13)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-14.png"
+                                     style="width:100%" onclick="currentSlide(14)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-15.png"
+                                     style="width:100%" onclick="currentSlide(15)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-16.png"
+                                     style="width:100%" onclick="currentSlide(16)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-17.png"
+                                     style="width:100%" onclick="currentSlide(17)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-18.png"
+                                     style="width:100%" onclick="currentSlide(18)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-19.png"
+                                     style="width:100%" onclick="currentSlide(19)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-20.png"
+                                     style="width:100%" onclick="currentSlide(20)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-21.png"
+                                     style="width:100%" onclick="currentSlide(21)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-22.png"
+                                     style="width:100%" onclick="currentSlide(22)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-23.png"
+                                     style="width:100%" onclick="currentSlide(23)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-24.png"
+                                     style="width:100%" onclick="currentSlide(24)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-25.png"
+                                     style="width:100%" onclick="currentSlide(25)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-26.png"
+                                     style="width:100%" onclick="currentSlide(26)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-27.png"
+                                     style="width:100%" onclick="currentSlide(27)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-28.png"
+                                     style="width:100%" onclick="currentSlide(28)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-29.png"
+                                     style="width:100%" onclick="currentSlide(29)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-30.png"
+                                     style="width:100%" onclick="currentSlide(30)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-31.png"
+                                     style="width:100%" onclick="currentSlide(31)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-32.png"
+                                     style="width:100%" onclick="currentSlide(32)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="public/instructivo/instructivo.TRANSPARENTE-33.png"
+                                     style="width:100%" onclick="currentSlide(33)" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="four" onclick="goToPage(3)">
-            <h1 style="background-color:rgb(255,232,236); margin: 0px">¡Gracias por tu compra!</h1>
-            <div class="logo">
-                <img src="public/assets/logo.png" alt="Logo">
-            </div>
-            <div class="social">
-                <h1>Hablemos:</h1>
-                <a href="https://www.instagram.com/maria.copasm">
-                    <img src="public/assets/insta.png" alt="Instagram">
-                </a>
-                <a href="https://wa.me/message/T7FMUI6GEJKHD1">
-                    <img src="public/assets/wa.png" alt="Whatsapp">
-                </a>
-            </div>
-        </section>
+            </section>
+            <section class="three" onclick="goToPage(2)">
+                <h1 style="background-color:rgb(255,232,236); margin: 0px">¡Gracias por tu compra!</h1>
+                <div class="logo">
+                    <img src="public/assets/logo.png" alt="Logo">
+                </div>
+                <div class="social">
+                    <h1>Hablemos:</h1>
+                    <a href="https://www.instagram.com/maria.copasm">
+                        <img src="public/assets/insta.png" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/message/T7FMUI6GEJKHD1">
+                        <img src="public/assets/wa.png" alt="Whatsapp">
+                    </a>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
-<script>
-    var pages = new Array('one', 'two', 'three', 'four');
 
-    function toggleMenu() {
-        document.getElementsByClassName('wrapper')[0].classList.toggle('menu-open');
-        var sections = document.getElementsByTagName('section');
-        for (i = 0; i < sections.length; i++) {
-            sections[i].classList.remove('notVisible');
-        }
-    }
+<script src="public/js/main.js"></script>
+<script src="public/js/gallery.js"></script>
+<script src="public/js/menu.js"></script>
 
-    function goToPage(page) {
-        var wrapper = document.getElementsByClassName('wrapper')[0];
-        var sections = document.getElementsByTagName('section');
-        for (i = 0; i < sections.length; i++) {
-            sections[i].classList.remove('before', 'after');
-            if (i > page) {
-                sections[i].classList.add('after', 'notVisible');
-            }
-        }
+<!--&lt;!&ndash; Core JS file &ndash;&gt;-->
+<!--<script src="public/js/photoswipe.js"></script>-->
 
-        sections[page].classList.add('visible');
-        wrapper.classList.remove('menu-open', 'page-one', 'page-two');
-        wrapper.classList.add('page-' + pages[page]);
-    }
-</script>
-
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        var captionText = document.getElementById("caption");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-    }
-</script>
 </body>
 </html>
 

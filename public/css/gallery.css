@@ -26,13 +26,12 @@
 .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 25%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
     border-radius: 0 3px 3px 0;
     user-select: none;
     background-color: rgba(43, 42, 42, 0.8);
