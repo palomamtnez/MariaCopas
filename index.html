@@ -6,27 +6,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="Description" content="Para la proteccion femenina">
     <meta name="title" content="Maria Copas">
+    <meta name="description" content="LA LIBERTAD QUE SIEMPRE BUSCASTE. Reutilizable, higiénica,
+    saludable, cómoda y amigable con el medio ambiente">
     <meta name="author" content="Paloma">
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/gallery.css">
-<!--    &lt;!&ndash; Core CSS file &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="public/css/photoswipe.css">-->
-
-<!--    &lt;!&ndash; Skin CSS file (styling of UI - buttons, caption, etc.)-->
-<!--         In the folder of skin CSS file there are also:-->
-<!--         - .png and .svg icons sprite,-->
-<!--         - preloader.gif (for browsers that do not support CSS animations) &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="public/css/default-skin/default-skin.css">-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176774430-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
-
         gtag('js', new Date());
         gtag('config', 'UA-176774430-1');
     </script>
@@ -45,9 +37,6 @@
             <h1>Menu</h1>
             <a class="menu-btn" onclick="toggleMenu()"></a>
             <section class="one" onclick="goToPage(0)">
-                <h1>Productos</h1>
-            </section>
-            <section class="two" onclick="goToPage(1)">
                 <h1>Instructivo</h1>
                 <!-- Container for the image gallery -->
                 <div class="instructivo">
@@ -365,19 +354,22 @@
                     </div>
                 </div>
             </section>
-            <section class="three" onclick="goToPage(2)">
+            <section class="two" onclick="goToPage(1)">
                 <h1 style="background-color:rgb(255,232,236); margin: 0px">¡Gracias por tu compra!</h1>
                 <div class="logo">
                     <img src="public/assets/logo.png" alt="Logo">
                 </div>
                 <div class="social">
-                    <h1>Hablemos:</h1>
+                    <h2>Hablemos:</h2>
                     <a href="https://www.instagram.com/maria.copasm">
                         <img src="public/assets/insta.png" alt="Instagram">
                     </a>
                     <a href="https://wa.me/message/T7FMUI6GEJKHD1">
                         <img src="public/assets/wa.png" alt="Whatsapp">
                     </a>
+                </div>
+                <div class="comprar">
+                    <h1><a href="http://www.mariacup.com" class="link">* Ir a tienda *</a></h1>
                 </div>
             </section>
         </div>
@@ -388,8 +380,15 @@
 <script src="public/js/gallery.js"></script>
 <script src="public/js/menu.js"></script>
 
-<!--&lt;!&ndash; Core JS file &ndash;&gt;-->
-<!--<script src="public/js/photoswipe.js"></script>-->
+<script>
+
+    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+//
+    } else {
+        window.location.assign("http://www.mariacup.com");
+    }
+
+</script>
 
 </body>
 </html>

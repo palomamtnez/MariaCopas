@@ -50,24 +50,14 @@ section {
 }
 
 section.one {
-    background: rgb(255, 157, 174);
-    -webkit-transition-delay: 0s;
+    background: rgb(252, 183, 195);
+    -webkit-transition-delay: 0.0s;
 }
 
 section.two {
-    background: rgb(252, 201, 210);
+    background: white;
     -webkit-transition-delay: 0.05s;
 }
-
-section.three {
-    background: white;
-    -webkit-transition-delay: 0.1s;
-}
-
-/*section.four {*/
-/*    background: white;*/
-/*    -webkit-transition-delay: 0.15s;*/
-/*}*/
 
 section.after {
     -webkit-transform: translateY(100%);
@@ -102,10 +92,6 @@ h1 {
     -webkit-transition-delay: 0.1s;
 }
 
-/*.page-one section.four {*/
-/*    -webkit-transition-delay: 0.05s;*/
-/*}*/
-
 .page-two section.one {
     -webkit-transition-delay: 0s;
 }
@@ -118,10 +104,6 @@ h1 {
     -webkit-transition-delay: 0.1s;
 }
 
-/*.page-two section.four {*/
-/*    -webkit-transition-delay: 0.05s;*/
-/*}*/
-
 .menu-open section {
     cursor: pointer;
 }
@@ -132,7 +114,7 @@ h1 {
 }
 
 .menu-open section.one:active {
-    background: rgb(255, 157, 174);
+    background:  rgb(252, 183, 195);
 }
 
 .menu-open section.two {
@@ -141,24 +123,6 @@ h1 {
 }
 
 .menu-open section.two:active {
-    background: rgb(252, 201, 210);
-}
-
-/*.menu-open section.three {*/
-/*    -webkit-transform: translateY(360px);*/
-/*    -webkit-transition-delay: 0.05s;*/
-/*}*/
-
-/*.menu-open section.three:active {*/
-/*    background: rgb(255, 213, 221);*/
-/*}*/
-
-.menu-open section.three {
-    -webkit-transform: translateY(360px);
-    -webkit-transition-delay: 0.05s;
-}
-
-.menu-open section.three:active {
     background: white;
 }
 
@@ -170,28 +134,12 @@ h1 {
     -webkit-transition-delay: 0.05s;
 }
 
-.menu-open.page-one section.three {
-    -webkit-transition-delay: 0.1s;
-}
-
-.menu-open.page-one section.four {
-    -webkit-transition-delay: 0.15s;
-}
-
 .menu-open.page-two section.one {
     -webkit-transition-delay: 0s;
 }
 
 .menu-open.page-two section.two {
     -webkit-transition-delay: 0.05s;
-}
-
-.menu-open.page-two section.three {
-    -webkit-transition-delay: 0.1s;
-}
-
-.menu-open.page-two section.four {
-    -webkit-transition-delay: 0.15s;
 }
 
 
@@ -208,15 +156,13 @@ h1 {
     margin: 0;
 }
 
-.social {
-    border-radius: 1em;
-    padding: 1em;
+.social, .comprar {
     text-align: center;
-
+    margin-bottom: 1rem;
 }
 
 .social img {
-    margin: 40px;
+    margin: 0 40px;
     width: 250px;
     height: 250px;
 }
@@ -227,6 +173,10 @@ h1 {
 
 .desktopShow {
     display: inline;
+}
+
+.link {
+    color: black;
 }
 
 /* Smartphone Portrait and Landscape */
